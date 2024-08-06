@@ -16,3 +16,10 @@ h6{
   font-family: "Inter", serif;
   color: $text-color;
 }
+
+html{
+  background: linear-gradient(180deg, #ffffff 0%, #c7edee 100%);
+  height: 100vh;
+  background: opacity(0.7);
+  background-repeat: no-repeat;
+}
