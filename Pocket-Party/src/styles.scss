@@ -1,1 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
+$primary-color: #328aff;
+$secondary-color: #5bebec;
+$warning-color: #e91e63;
+$light-warning-color: #ff917b;
+$alternative-color: #990072;
+$text-color: #030911;
+$our-white-color: #fcfcec;
+
+h1{
+  font-family: "Playfair Display", serif;
+  color: $primary-color;
+}
+
+h6{
+  font-family: "Inter", serif;
+  color: $text-color;
+}
