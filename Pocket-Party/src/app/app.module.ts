@@ -6,7 +6,6 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home/home.component';
 import { LoginComponent } from './login/login/login.component';
 import { MenuComponent } from './menu/menu.component';
-import { CadastroComponent } from './cadastro/cadastro/cadastro.component';
 import { CadastroClienteComponent } from './cadastro/cadastro-cliente/cadastro-cliente.component';
 import { CadastroEmpresaComponent } from './cadastro/cadastro-empresa/cadastro-empresa.component';
 
@@ -16,7 +15,6 @@ import { CadastroEmpresaComponent } from './cadastro/cadastro-empresa/cadastro-e
     HomeComponent,
     LoginComponent,
     MenuComponent,
-    CadastroComponent,
     CadastroClienteComponent,
     CadastroEmpresaComponent
   ],
