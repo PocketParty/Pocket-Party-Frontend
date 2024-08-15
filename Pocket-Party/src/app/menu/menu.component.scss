@@ -1,0 +1,62 @@
+
+.menu-topo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo{
+    height: 3rem;
+    width: 3rem;
+    padding: 1rem;
+}
+
+a{
+    text-decoration: none;
+}
+
+.logo-nome{
+    padding-left: 1rem;
+    display:flex;
+    align-items: center;
+    
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+#cadastro{
+    width: 7rem;
+    border: 3px solid var(--light-warning-color);
+    color: var(--light-warning-color);
+}
+#cadastro:hover{
+    background-color: var(--light-warning-color);
+    color: var(--our-white-color);
+    transition-duration: .7s;
+}
+
+#login{
+    width: 5rem;
+    border: 3px solid var(--primary-color);
+    color: var(--primary-color);
+    transition: background-color .5s ease-in, transform .3s ease-out;
+    transition: color .5s ease-in, transform .3s ease-out;
+}
+#login:hover{
+    background-color: var(--primary-color);
+    color: var(--our-white-color);
+}
+.botao{
+    background: none;
+    height: 3rem;
+    margin:1rem;
+    border-radius: 8px;
+    font-family: "Inter", serif;
+    font-weight: bold;
+}
+.buttons{
+    
+    display: flex;
+}
