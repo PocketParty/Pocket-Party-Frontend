@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { MenuVisibilityService } from 'src/app/shared/services/menu-visibility.service';
 
 @Component({
@@ -11,16 +11,14 @@ export class LoginComponent implements OnInit{
 
   constructor(
     private menuVisibilityService: MenuVisibilityService,
-    private router: Router
+    private router: Router,
   ) {}
 
   ngOnInit() {
-    this.menuVisibilityService.hideMenu();  // Hide menu on login component init
   }
 
   navigateToHome() {
-    this.menuVisibilityService.showMenu();
-    this.router.navigate(['/home']);
+    this.router.navigateByUrl('/home');
   }
 
 }

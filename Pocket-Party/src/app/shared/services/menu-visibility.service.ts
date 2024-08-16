@@ -1,16 +1,21 @@
-import { Injectable } from '@angular/core';
+import { Injectable  } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
+import { Router } from '@angular/router';
 
-@Injectable({ providedIn: 'root' })
-export class MenuVisibilityService {
-private isMenuVisible = new BehaviorSubject<boolean>(true);
-menuVisibility$ = this.isMenuVisible.asObservable();  
+@Injectable({
+  providedIn: 'root'
+})
+export class  
+ MenuVisibilityService {
+  private menuVisibilitySource = new BehaviorSubject<boolean>(true);
+  menuVisibility$ = this.menuVisibilitySource.asObservable();
 
- hideMenu() {
-   this.isMenuVisible.next(false);
- }
+  constructor(router: Router) {
+    router.events.subscribe(() => {
+      const currentUrl = router.url;
+      const isLoginPage = currentUrl === '/login';
 
- showMenu() {
-   this.isMenuVisible.next(true);
- }
+      this.menuVisibilitySource.next(!isLoginPage);
+    });
+  }
 }

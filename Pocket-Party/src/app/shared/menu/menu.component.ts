@@ -11,7 +11,7 @@ export class MenuComponent{
   constructor(private router: Router) {}
 
   navigateToLogin() {
-    this.router.navigate(['/login']);
+    this.router.navigateByUrl('/login');
   }
 
 }
