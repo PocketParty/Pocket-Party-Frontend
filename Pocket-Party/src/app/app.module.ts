@@ -8,6 +8,9 @@ import { LoginComponent } from './presentation/login/login/login.component';
 import { MenuComponent } from './shared/menu/menu.component';
 import { CadastroClienteComponent } from './presentation/cadastro/cadastro-cliente/cadastro-cliente.component';
 import { CadastroEmpresaComponent } from './presentation/cadastro/cadastro-empresa/cadastro-empresa.component';
+import { MatDialogModule } from '@angular/material/dialog';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -20,7 +23,10 @@ import { CadastroEmpresaComponent } from './presentation/cadastro/cadastro-empre
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    NoopAnimationsModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]
