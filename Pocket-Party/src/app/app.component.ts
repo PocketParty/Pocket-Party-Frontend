@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { MenuVisibilityService } from './shared/services/menu-visibility.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Pocket-Party';
+
+  constructor(public menuVisibilityService: MenuVisibilityService) {}
+
 }
