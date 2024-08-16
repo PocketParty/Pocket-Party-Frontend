@@ -8,6 +8,7 @@
     margin: 0 auto;
     background-color: var(--our-white-color);
     text-align: center;
+
 }
 
 img{
@@ -47,7 +48,7 @@ button{
     background-color: var(--our-white-color);
     color: var(--warning-color);  
     transition-duration: .7s;
-
+    cursor: pointer;
 }
 
 #login{
@@ -57,4 +58,5 @@ button{
     background-color: var(--our-white-color);
     color: var(--primary-color);
     transition-duration: .7s;
+    cursor: pointer;
 }

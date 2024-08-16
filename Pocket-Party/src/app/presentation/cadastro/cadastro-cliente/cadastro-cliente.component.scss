@@ -1,0 +1,89 @@
+.formulario-cadastro {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 10px;
+    height: 31rem;
+    width: 40rem;
+    margin: 0 auto;
+    background-color: var(--our-white-color);
+    text-align: center;
+}
+
+img{
+    height: 5rem;
+    width: 5rem;
+    padding-top: 1rem;
+}
+
+input{
+    margin: .4rem ;    
+    height: 1.7rem;
+    border: 1px solid var(--primary-color);
+    border-radius: 5px;
+}
+
+button{
+    padding: .8rem;
+    margin: .5rem;
+    border: solid 2px;
+    border-radius: 6px;
+    color: var(--our-white-color);
+}
+
+#cancelar{
+    background-color: var(--warning-color);
+
+}
+#cancelar:hover{
+    background-color: var(--our-white-color);
+    color: var(--warning-color);  
+    transition-duration: .7s;
+    cursor: pointer;
+}
+
+#cadastrar{
+    background-color: var(--primary-color);
+}
+
+#cadastrar:hover{
+    background-color: var(--our-white-color);
+    color: var(--primary-color);
+    transition-duration: .7s;
+    cursor: pointer;
+}
+
+.inputs{
+    display: grid;
+    justify-items: start;
+    align-content: stretch;
+    justify-content: center;
+}
+
+.row2{
+    display: flex;
+    flex-direction: row;
+}
+
+#checkcnpj{
+    margin:.1rem;
+    margin-top: -.2rem;
+}
+#box{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.row3{
+    width: 95%;
+}
+
+#endereco{
+    width: 100%;
+}
+
+input:focus{
+    outline: 1px solid var(--primary-color);
+}
