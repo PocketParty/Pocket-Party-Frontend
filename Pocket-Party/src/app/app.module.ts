@@ -11,6 +11,7 @@ import { CadastroEmpresaComponent } from './presentation/cadastro/cadastro-empre
 import { MatDialogModule } from '@angular/material/dialog';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { FeedComponent } from './presentation/feed/feed.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
     LoginComponent,
     MenuComponent,
     CadastroClienteComponent,
-    CadastroEmpresaComponent
+    CadastroEmpresaComponent,
+    FeedComponent
   ],
   imports: [
     BrowserModule,
