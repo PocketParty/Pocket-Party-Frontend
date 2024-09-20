@@ -14,8 +14,10 @@ export class  
     router.events.subscribe(() => {
       const currentUrl = router.url;
       const isLoginPage = currentUrl === '/login';
+      const isCadastroPage = currentUrl.includes('/cadastro');
 
-      this.menuVisibilitySource.next(!isLoginPage);
+
+      this.menuVisibilitySource.next(!isLoginPage && !isCadastroPage);
     });
   }
 }
