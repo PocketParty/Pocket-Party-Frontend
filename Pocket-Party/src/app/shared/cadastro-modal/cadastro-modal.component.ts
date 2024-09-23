@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-cadastro-modal',
@@ -7,8 +8,14 @@ import { Component } from '@angular/core';
 })
 export class CadastroModalComponent {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
+  client(){
+    this.router.navigateByUrl('/cadastro-cliente');
+  }
 
+  company(){
+    this.router.navigateByUrl('/cadastro-empresa');
+  }
 
 }

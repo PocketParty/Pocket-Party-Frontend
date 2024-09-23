@@ -10,7 +10,6 @@ import { MenuVisibilityService } from 'src/app/shared/services/menu-visibility.s
 export class LoginComponent implements OnInit{
 
   constructor(
-    private menuVisibilityService: MenuVisibilityService,
     private router: Router,
   ) {}
 
