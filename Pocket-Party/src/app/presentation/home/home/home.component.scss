@@ -5,7 +5,7 @@
 
 .about{
     text-align: center;
-    padding: 5rem 5rem 0 5rem;
+    padding: 2rem 5rem 0 5rem;
 }
 
 .logo{
@@ -14,4 +14,53 @@
 
 img{
     height: 90%;
+}
+h3{
+  font-family: "Inter", serif;
+  font-weight: normal;
+  color: #030911
+}
+h1{
+  color: #030911;
+  font-weight: normal;
+}
+
+.buttons{
+  display: flex;
+  align-items: center;
+}
+
+.btn {
+  cursor: pointer;
+  border: 0px solid rgb(187, 204, 0);
+  font-family: Playfair;
+  font-size: 20px;
+  color: rgb(255, 255, 255);
+  padding: 10px 30px;
+  transition: 1689ms;
+  width: 290px;
+  height: 50px;
+  box-shadow: rgb(0, 0, 0) 0px 0px 0px 0px;
+  border-radius: 7px;
+  font-weight: 100;
+  --hover-borderSize: 0px;
+  --hover-bgc: #990072;
+  --hover-color: #ffffff;
+  --hover-width: 335px;
+  }
+
+  .btn:hover{
+  color: rgb(255, 255, 255);
+  background: rgb(153, 0, 114) none repeat scroll 0% 0% / auto padding-box border-box !important;
+  border-color: rgb(204, 0, 105);
+  border-width: 0px;
+  border-style: solid;
+  }
+
+#customBtn1{
+  background: rgb(50, 138, 255);
+}
+
+#customBtn2{
+  background: rgb(233, 30, 99);
 }
