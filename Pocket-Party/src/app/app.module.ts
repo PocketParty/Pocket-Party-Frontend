@@ -10,6 +10,7 @@ import { CadastroClienteComponent } from './presentation/cadastro/cadastro-clien
 import { CadastroEmpresaComponent } from './presentation/cadastro/cadastro-empresa/cadastro-empresa.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FeedComponent } from './presentation/feed/feed.component';
 import { CadastroModalComponent } from './shared/cadastro-modal/cadastro-modal.component';
 
 @NgModule({
@@ -20,8 +21,9 @@ import { CadastroModalComponent } from './shared/cadastro-modal/cadastro-modal.c
     MenuComponent,
     CadastroClienteComponent,
     CadastroEmpresaComponent,
+    FeedComponent,
     CadastroModalComponent
-    ],
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,

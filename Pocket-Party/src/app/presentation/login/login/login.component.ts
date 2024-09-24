@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
-import { MenuVisibilityService } from 'src/app/shared/services/menu-visibility.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -10,7 +9,7 @@ import { MenuVisibilityService } from 'src/app/shared/services/menu-visibility.s
 export class LoginComponent implements OnInit{
 
   constructor(
-    private router: Router,
+    private router: Router
   ) {}
 
   ngOnInit() {
@@ -18,6 +17,10 @@ export class LoginComponent implements OnInit{
 
   navigateToHome() {
     this.router.navigateByUrl('/home');
+  }
+
+  submit(){
+    this.router.navigateByUrl('/feed')
   }
 
 }

@@ -14,6 +14,9 @@ const routes: Routes = [
   },
   {path: 'cadastro-empresa',
     loadChildren: () => import('./presentation/cadastro/cadastro-empresa/cadastro-empresa.module').then(m => m.CadastroEmpresaModule)
+  },
+  {path: 'feed',
+    loadChildren: () => import('./presentation/feed/feed.module').then(m => m.FeedModule)
   }
 ];
 
