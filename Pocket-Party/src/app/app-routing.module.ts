@@ -17,6 +17,9 @@ const routes: Routes = [
   },
   {path: 'feed',
     loadChildren: () => import('./presentation/feed/feed.module').then(m => m.FeedModule)
+  },
+  {path: 'loja', 
+    loadChildren: () => import('./presentation/loja/loja.module').then(m => m.LojaModule)
   }
 ];
 
