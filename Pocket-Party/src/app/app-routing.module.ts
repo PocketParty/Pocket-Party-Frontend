@@ -23,6 +23,9 @@ const routes: Routes = [
   },
   {path: 'edit-empresa',
     loadChildren: () => import('./presentation/cadastro/edit-empresa/edit-empresa.module').then(m => m.EditEmpresaModule)
+  },
+  {path: 'view-button',
+    loadChildren: () => import('./presentation//view-button/view-button.module').then(m => m.ViewButtonModule)
   }
 ];
 

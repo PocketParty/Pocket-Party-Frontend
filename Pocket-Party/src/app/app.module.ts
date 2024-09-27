@@ -19,6 +19,7 @@ import { EditEmpresaComponent } from './presentation/cadastro/edit-empresa/edit-
 import { ProductModalComponent } from './shared/product-modal/product-modal.component';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { ShowProductModalComponent } from './shared/show-product-modal/show-product-modal.component';
+import { ViewButtonComponent } from './presentation/view-button/view-button.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { ShowProductModalComponent } from './shared/show-product-modal/show-prod
     LojaComponent,
     EditEmpresaComponent,
     ProductModalComponent,
-    ShowProductModalComponent
+    ShowProductModalComponent,
+    ViewButtonComponent
   ],
   imports: [
     BrowserModule,
