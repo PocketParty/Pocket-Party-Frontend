@@ -1,5 +1,4 @@
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-edit-empresa',
@@ -15,13 +14,10 @@ export class EditEmpresaComponent implements OnInit {
 
   @ViewChild('fileInput') fileInput!: ElementRef;
 
-  constructor(private router: Router) {}
+  constructor() {}
 
   ngOnInit(): void {}
 
-  navigateToHome() {
-    this.router.navigateByUrl('/home');
-  }
 
   onFileSelected(event: Event): void {
     const input = event.target as HTMLInputElement;

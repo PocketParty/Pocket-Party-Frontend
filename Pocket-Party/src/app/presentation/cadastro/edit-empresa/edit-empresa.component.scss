@@ -40,22 +40,12 @@ button {
     transition: all 0.3s ease;
 }
 
-#cancelar {
-    background-color: var(--warning-color);
-}
 
-#cancelar:hover {
-    background-color: var(--our-white-color);
-    color: var(--warning-color);
-    transition-duration: 0.7s;
-    cursor: pointer;
-}
-
-#cadastrar {
+#salvar {
     background-color: var(--primary-color);
 }
 
-#cadastrar:hover {
+#salvar:hover {
     background-color: var(--our-white-color);
     color: var(--primary-color);
     transition-duration: 0.7s;
