@@ -15,6 +15,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FeedComponent } from './presentation/feed/feed.component';
 import { CadastroModalComponent } from './shared/cadastro-modal/cadastro-modal.component';
 import { LojaComponent } from './presentation/loja/loja/loja.component';
+import { EditEmpresaComponent } from './presentation/cadastro/edit-empresa/edit-empresa.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { LojaComponent } from './presentation/loja/loja/loja.component';
     CadastroEmpresaComponent,
     FeedComponent,
     CadastroModalComponent,
-    LojaComponent
+    LojaComponent,
+    EditEmpresaComponent
   ],
   imports: [
     BrowserModule,

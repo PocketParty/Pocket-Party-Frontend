@@ -20,6 +20,9 @@ const routes: Routes = [
   },
   {path: 'loja', 
     loadChildren: () => import('./presentation/loja/loja.module').then(m => m.LojaModule)
+  },
+  {path: 'edit-empresa',
+    loadChildren: () => import('./presentation/cadastro/edit-empresa/edit-empresa.module').then(m => m.EditEmpresaModule)
   }
 ];
 

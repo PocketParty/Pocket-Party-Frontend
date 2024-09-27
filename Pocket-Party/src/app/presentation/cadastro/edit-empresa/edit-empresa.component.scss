@@ -1,0 +1,281 @@
+.formulario-cadastro {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px; /* Aumentei o padding para melhorar o espaçamento interno */
+    margin: 20px auto; /* Centraliza e adiciona margem superior/inferior */
+    width: 40rem;
+    background-color: var(--our-white-color);
+    text-align: center;
+}
+
+img {
+    height: 5rem;
+    width: 5rem;
+    margin: 0 auto;
+    display: block; /* Centraliza a imagem */
+    padding-top: 1rem;
+}
+
+input, textarea {
+    margin: 0.4rem;
+    height: 1.7rem;
+    width: 100%; /* Faz o input ocupar toda a largura */
+    max-width: 100%; /* Impede que o input quebre o layout */
+    border: 1px solid var(--primary-color);
+    border-radius: 5px;
+    padding: 0.5rem; /* Adicionei padding para melhorar a estética */
+    box-sizing: border-box; /* Garante que padding e bordas sejam inclusos na largura total */
+}
+
+textarea {
+    height: 4rem;
+}
+
+button {
+    padding: 0.8rem 1.2rem; /* Melhorado o espaçamento do botão */
+    margin: 0.5rem;
+    border: solid 2px;
+    border-radius: 6px;
+    color: var(--our-white-color);
+    transition: all 0.3s ease;
+}
+
+#cancelar {
+    background-color: var(--warning-color);
+}
+
+#cancelar:hover {
+    background-color: var(--our-white-color);
+    color: var(--warning-color);
+    transition-duration: 0.7s;
+    cursor: pointer;
+}
+
+#cadastrar {
+    background-color: var(--primary-color);
+}
+
+#cadastrar:hover {
+    background-color: var(--our-white-color);
+    color: var(--primary-color);
+    transition-duration: 0.7s;
+    cursor: pointer;
+}
+
+.inputs {
+    display: grid;
+    grid-template-columns: 1fr; /* Coloca todos os inputs em uma coluna */
+    gap: 10px; /* Adiciona espaçamento entre os inputs */
+    width: 100%; /* Faz o container de inputs ocupar toda a largura */
+    justify-items: center;
+    align-content: stretch;
+}
+
+input:focus, textarea:focus {
+    outline: 1px solid var(--primary-color);
+}
+
+.row2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px; /* Espaçamento entre os elementos */
+}
+
+.row3 {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; /* Ajusta os itens no espaço disponível */
+    gap: 10px;
+}
+
+.atuacao-group {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.atuacao-group button {
+    background-color: #f1f1f1;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    padding: 8px 16px;
+    font-size: 14px;
+    color: black;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.atuacao-group button.selected {
+    background-color: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+}
+
+.atuacao-group button:hover {
+    background-color: var(--primary-color);
+}
+
+#bigrow {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    gap: 20px; /* Adiciona espaçamento entre os itens */
+}
+
+#box {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px; /* Adiciona espaçamento entre os elementos */
+}
+
+.row4 {
+    display: flex;
+    flex-direction: column;
+    width: 100%; /* Faz a coluna ocupar toda a largura disponível */
+    align-items: stretch;
+    gap: 10px; /* Espaçamento entre os itens */
+}
+
+#descricao, #endereco {
+    width: 100%;
+}
+
+label {
+    font-size: 14px;
+    font-weight: bold;
+    color: var(--primary-color);
+    display: block;
+    text-align: left; /* Garante que os labels estejam alinhados à esquerda */
+}
+
+.custom-file-label {
+    display: block;
+    font-size: 14px;
+    color: #1a73e8;
+    margin-bottom: 8px;
+}
+
+.custom-file-upload {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+    max-width: 300px;
+    margin: 10px auto; /* Centraliza o componente */
+    position: relative;
+}
+
+.file-input {
+    opacity: 0;
+    position: absolute;
+    z-index: -1;
+}
+
+.file-name {
+    padding: 8px 12px;
+    font-size: 14px;
+    color: black;
+    background-color: #f1f3f4;
+    border-right: 1px solid #ccc;
+    flex-grow: 1;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.file-browse {
+    padding: 8px 16px;
+    font-size: 14px;
+    background-color: #e9ecef;
+    border: none;
+    cursor: pointer;
+    color: #5f6368;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.file-browse:hover {
+    background-color: #d6d9dc;
+}
+
+.file-browse:active {
+    background-color: #c2c6c9;
+}
+
+input[type="checkbox"] {
+    outline: none;
+    margin-right: 8px;
+}
+
+input[type="checkbox"]:focus {
+    outline: none;
+}
+
+.custom-checkbox {
+    color: var(--primary-color);
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+button:hover, .custom-file-upload:hover, .file-browse:hover {
+    transition: all 0.3s ease;
+}
+
+.button-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.button-group button {
+    background-color: #f1f1f1;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    padding: 8px 16px;
+    font-size: 14px;
+    color: #555;
+    cursor: pointer;
+    margin: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.button-group button.selected {
+    background-color: var(--primary-color);
+    color: var(--our-white-color);
+    border-color: var(--primary-color);
+}
+
+.button-group button:hover {
+    color: var(--our-white-color);
+    background-color: var(--primary-color);
+}
+
+.event-selection p {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: var(--primary-color);
+}
+
+.whatsapp, .facebook, .instagram {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+}
+
+#descricao {
+    width: 100%; /* Garante que o input ocupe toda a largura disponível */
+    box-sizing: border-box; /* Inclui padding e bordas no cálculo da largura total */
+    margin: 0.4rem 0; /* Ajusta a margem superior/inferior */
+    border: 1px solid var(--primary-color);
+    border-radius: 5px;
+    padding: 0.5rem; /* Adiciona padding para um melhor visual */
+}

@@ -1,0 +1,69 @@
+<div class="formulario-cadastro">
+    <img src="../../../assets/logo.png" alt="">
+    <h1>Suas informações</h1>
+    <div class="inputs">
+        <div id="bigrow">
+            <div class="row1">
+                <label for="profilePicture" class="custom-file-label">Foto de perfil</label>
+                <div class="custom-file-upload">
+                    <input #fileInput type="file" id="profilePicture" class="file-input" accept="image/*" (change)="onFileSelected($event)">
+                    <span class="file-name">{{ fileName }}</span>
+                    <button class="file-browse" (click)="triggerFileInputClick()">Pesquisar</button>
+                </div>
+            </div>
+
+            <div class="row2">
+                <label for="atuacao">Atuação</label>
+                <div class="atuacao-group">
+                    <button 
+                        [class.selected]="atuacaoSelected.includes('Serviço')" 
+                        (click)="toggleAtuacao('Serviço')">Serviço</button>
+            
+                    <button 
+                        [class.selected]="atuacaoSelected.includes('Empresa')" 
+                        (click)="toggleAtuacao('Empresa')">Empresa</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="row3">
+            <div class="whatsapp">
+                <label for="whatsapp">Link para Whatsapp</label>
+                <input type="url" placeholder="Link para Whatsapp" id="whatsapp">
+            </div>
+            <div class="facebook">
+                <label for="facebook">Link para Facebook</label>
+                <input type="url" placeholder="Link para Facebook" id="facebook">
+            </div>
+            <div class="instagram">
+                <label for="instagram">Link para Instagram</label>
+                <input type="url" placeholder="Link para Instagram" id="instagram">
+            </div>
+        </div>
+
+        <div class="row4">
+            <label for="descricao">Descrição</label>
+            <input type="text" id="descricao" placeholder="Descrição">
+        </div>
+
+        <!-- Seção para Seleção de Eventos -->
+        <div class="row5">
+            <div class="event-selection">
+                <p>Quais eventos realiza?</p>
+                <div class="button-group">
+                    <button 
+                        *ngFor="let event of events"
+                        [ngClass]="{'selected': selectedEvents.includes(event)}"
+                        (click)="toggleSelection(event)">
+                        {{ event }}
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="botoes">
+        <button type="reset" id="cancelar" (click)="navigateToHome()">Cancelar</button>
+        <button type="submit" id="cadastrar">Cadastrar</button>
+    </div>
+</div>
