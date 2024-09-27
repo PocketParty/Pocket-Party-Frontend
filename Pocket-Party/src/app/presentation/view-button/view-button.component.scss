@@ -1,0 +1,191 @@
+
+.titulo{
+    display: flex;
+
+    justify-content: center;
+}
+.toggle-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Span cursor pointer */
+  span {
+    cursor: pointer;
+    color: var(--warning-color);
+  }
+  
+  /* Toggle switch */
+  .toggle {
+    display: inline-block;
+    position: relative;
+    width: 60px;
+    height: 25px;
+    margin: 0 10px;
+    border: 3px solid var(--warning-color);
+    border-radius: 20px;
+    cursor: pointer;
+  }
+  
+  /* Toggle button circle */
+  .toggle-button {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 21px;
+    height: 21px;
+    background-color: var(--warning-color);
+    border-radius: 50%;
+    transition: all 0.3s ease;
+  }
+  
+  /* Toggle button when active */
+  .toggle-button.active {
+    left: 35px;
+    background-color: var(--alternative-color);
+  }
+  
+  /* Toggle active border color */
+  .toggle.active {
+    border: 3px solid var(--alternative-color);
+  }
+  
+  /* company label color */
+  .company {
+    color: var(--alternative-color);
+  }
+
+  .categories{
+    text-align: center;
+  }
+  
+  .categoriesBtn{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  
+  .btn {
+    cursor: pointer;
+    border: 0px solid rgb(187, 204, 0);
+    font-family: "Inter";
+    font-size: 14px;
+    color: rgb(255, 255, 255);
+    padding: 10px 30px;
+    transition: 2s;
+    width: 150px;
+    border-radius: 50px;
+    cursor: pointer;
+  }
+  
+  #btn1, #btn3, #btn5, #btn7{
+    box-shadow: rgb(180 169 183) 0px 2px 9px 2px;
+    background: rgb(233, 30, 99);
+  }
+  
+  #btn2, #btn4, #btn6{
+    box-shadow: rgb(180 169 183) 0px 2px 9px 2px;
+    background: rgb(153, 0, 114);
+  }
+  
+  #btn01, #btn03, #btn05, #btn07{
+    box-shadow: rgb(180 169 183) 0px 2px 9px 2px;
+    background: rgb(255, 145, 123);
+  }
+  
+  #btn02, #btn04, #btn06{
+    box-shadow: rgb(180 169 183) 0px 2px 9px 2px;
+    background: rgb(28, 124, 226);
+  }
+  
+  .btn:hover{
+    color: rgb(255, 255, 255);
+    width: 160px;
+    background: rgb(28, 124, 226) !important;
+    border-width: 0px;
+    border-style: solid;
+  }
+  
+  .btn2 {
+    cursor: pointer;
+    border: 0px solid rgb(187, 204, 0);
+    font-family: "Inter";
+    font-size: 14px;
+    color: rgb(255, 255, 255);
+    padding: 10px 30px;
+    transition: 2s;
+    width: 150px;
+    border-radius: 50px;
+    cursor: pointer;
+  }
+  
+  
+  .btn2:hover{
+    color: rgb(255, 255, 255);
+    width: 160px;
+    background: rgb(233, 30, 99) !important;
+    border-width: 0px;
+    border-style: solid;
+  }
+  
+  .empresa {
+    border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 10px;
+    height: 17rem;
+    width: 14rem;
+    margin: 0 auto;
+    background-color: #fff;
+    text-align: center;
+    transition: 0.1s;
+    border-width: 3px;
+    box-shadow: rgb(188, 187, 189) 0px 2px 9px 2px;
+    background: rgb(255, 255, 255);
+    margin-bottom: 2rem;
+    cursor: pointer;
+  }
+  
+  .empresa:hover{
+    border-color: rgb(204, 0, 105);
+    border-width: 3px;
+    border-style: solid;
+  }
+  
+  h3{
+    font-family: "Playfair Display", serif;
+    color: var(--primary-color);
+    text-wrap: wrap;
+  }
+  h5{
+    margin: 0;
+    font-size: xx-small;
+  }
+  
+  img{
+    width: 14rem;
+  }
+  
+  .labelCat3{
+    font-family: "Inter";
+    font-size: 14px;
+    color: rgb(255, 255, 255);
+    transition: 2s;
+    width: 4rem;
+    border-radius: 50px;
+    box-shadow: rgb(180 169 183) 0px 2px 9px 2px;
+    background: rgb(255, 145, 123);
+  }
+  
+  .labelCat4{
+    font-family: "Inter";
+    font-size: 14px;
+    color: rgb(255, 255, 255);
+    transition: 2s;
+    width: 4rem;
+    border-radius: 50px;
+    box-shadow: rgb(180 169 183) 0px 2px 9px 2px;
+    background: rgb(28, 124, 226);
+  }
+  
+  

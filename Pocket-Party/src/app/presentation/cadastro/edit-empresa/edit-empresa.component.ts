@@ -7,7 +7,7 @@ import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 })
 export class EditEmpresaComponent implements OnInit {
 
-  fileName: string = 'Choose files';
+  fileName: string = 'Pesquisar';
   atuacaoSelected: string[] = []; // Array to store selected 'Atuação' options
   events: string[] = ['Aniversário', 'Formatura', 'Festa Infantil', 'Pool Party', 'Casamento', 'Noivado', 'Cerimônias Religiosas'];
   selectedEvents: string[] = []; // Array for selected event types
