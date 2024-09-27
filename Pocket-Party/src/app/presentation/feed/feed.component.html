@@ -36,24 +36,22 @@
   <h1>Empresas na sua região</h1>
   <div style="display: flex; flex-wrap: wrap;">
     <ng-container *ngFor="let item of items">
-      <button type="hidden" (click)="openModal(item)" style="background: none;border: none;">
+      <button type="hidden" (click)="goToLoja(item)" style="background: none;border: none;">
         <div class="empresa">
-        <img src="https://auhekids.com.br/wp-content/uploads/2024/03/Desvendando-o-Codigo-da-Festa-Infantil-O-Segredo-do-Sucesso-1.jpg" alt="">
-        <h3>{{item}}</h3>
+        <img src="{{item.image}}" alt="">
+        <h3>{{item.name}}</h3>
         <div style="display: flex; flex-wrap: wrap; justify-content: space-evenly;">
-          <div style="margin-bottom: 1rem;"><div class="labelCat3"><h5>Balões</h5></div></div>
-          <div style="margin-bottom: 1rem;"><div class="labelCat4"><h5>Serviços</h5></div></div>
-          <div style="margin-bottom: 1rem;"><div class="labelCat3"><h5>Bebidas</h5></div></div>
-          <div style="margin-bottom: 1rem;"><div class="labelCat4"><h5>Buffet</h5></div></div>
-          <div style="margin-bottom: 1rem;"><div class="labelCat3"><h5>Descartáveis</h5></div></div>
-          <div style="margin-bottom: 1rem;"><div class="labelCat4"><h5>Decoração</h5></div></div>
+          <div style="margin-bottom: 1rem;" *ngIf="item.category[0]"><div class="labelCat3"><h5>Balões</h5></div></div>
+          <div style="margin-bottom: 1rem;" *ngIf="item.category[1]"><div class="labelCat4"><h5>Serviços</h5></div></div>
+          <div style="margin-bottom: 1rem;" *ngIf="item.category[2]"><div class="labelCat3"><h5>Bebidas</h5></div></div>
+          <div style="margin-bottom: 1rem;" *ngIf="item.category[3]"><div class="labelCat4"><h5>Buffet</h5></div></div>
+          <div style="margin-bottom: 1rem;" *ngIf="item.category[4]"><div class="labelCat3"><h5>Descartáveis</h5></div></div>
+          <div style="margin-bottom: 1rem;" *ngIf="item.category[5]"><div class="labelCat4"><h5>Decoração</h5></div></div>
+          <div style="margin-bottom: 1rem;" *ngIf="item.category[6]"><div class="labelCat3"><h5>Brinquedos</h5></div></div>
         </div>
       </div>
     </button>
     </ng-container>
   </div>
-  <div class="modal" *ngIf="showModal" (click)="closeModal($event)">
-    <div class="modal-content">
-      <app-show-product-modal [data]="product"></app-show-product-modal>
-    </div>
+
 </div>

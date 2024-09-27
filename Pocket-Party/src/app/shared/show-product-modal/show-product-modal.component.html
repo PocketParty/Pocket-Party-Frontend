@@ -3,7 +3,10 @@
   <div class="info">
     <div>
       <h1 style="margin: 0;">{{data.name}}</h1>
-      <h2>{{value}}</h2>
+      <div style="display: flex; align-items: center; justify-content: space-evenly;">
+        <h2>{{value}}</h2>
+        <button class="btn" id="btn1">Venda</button>
+      </div>
     </div>
     <h3>{{data.descripition}}</h3>
   </div>
@@ -15,4 +18,5 @@
   <div class="labelCat4" *ngIf="data.category[3]" style="margin-bottom: 1rem;"><h5>Buffet</h5></div>
   <div class="labelCat3" *ngIf="data.category[4]" style="margin-bottom: 1rem;"><h5>Descartáveis</h5></div>
   <div class="labelCat4" *ngIf="data.category[5]" style="margin-bottom: 1rem;"><h5>Decoração</h5></div>
+  <div class="labelCat4" *ngIf="data.category[6]" style="margin-bottom: 1rem;"><h5>Brinquedos</h5></div>
 </div>

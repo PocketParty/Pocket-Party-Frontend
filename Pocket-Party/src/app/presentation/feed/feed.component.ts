@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { StoreService } from 'src/app/shared/services/store.service';
 
 @Component({
   selector: 'app-feed',
@@ -8,26 +10,19 @@ import { Component, OnInit } from '@angular/core';
 
 export class FeedComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router : Router, private storeService: StoreService) { }
 
   showModal = false;
 
-  items = ['Empresa Festas LTDA', 'Empresa Festas LTDA', 'Empresa Festas LTDA', 'Empresa Festas LTDA', 'Empresa Festas LTDA']
-
-  ngOnInit(): void {
+  goToLoja(item: any){
+    this.router.navigate(['/loja', item.id]);
   }
 
-  product: {name: string, descripition: string, image: string, preco: string, category: boolean[]};
 
-  openModal(produto: any) {
-    this.product = {
-      name: 'Loja de Fulano',
-      descripition: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-      image: 'https://auhekids.com.br/wp-content/uploads/2024/03/Desvendando-o-Codigo-da-Festa-Infantil-O-Segredo-do-Sucesso-1.jpg',
-      preco: '10',
-      category: [false, false, false, false, false, true]
-    }
-    this.showModal = true;
+  items: any;
+
+  ngOnInit(): void {
+    this.items = this.storeService.getStores();
   }
 
   closeModal(event: Event) {

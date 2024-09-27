@@ -53,3 +53,18 @@ h5{
   justify-content: space-evenly;
   align-items: center;
 }
+
+.btn {
+  cursor: pointer;
+  border: 0;
+  font-family: "Inter";
+  font-size: 14px;
+  color: rgb(255, 255, 255);
+  padding: 10px 30px;
+  transition: 2s;
+  width: 150px;
+  border-radius: 50px;
+  cursor: pointer;
+  background: rgb(233, 30, 99);
+  cursor: default;
+}

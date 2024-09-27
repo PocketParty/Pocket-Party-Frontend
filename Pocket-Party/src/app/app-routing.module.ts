@@ -18,7 +18,7 @@ const routes: Routes = [
   {path: 'feed',
     loadChildren: () => import('./presentation/feed/feed.module').then(m => m.FeedModule)
   },
-  {path: 'loja', 
+  {path: 'loja/:id',
     loadChildren: () => import('./presentation/loja/loja.module').then(m => m.LojaModule)
   },
   {path: 'edit-empresa',
