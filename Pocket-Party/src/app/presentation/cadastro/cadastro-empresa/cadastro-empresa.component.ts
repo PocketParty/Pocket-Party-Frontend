@@ -19,4 +19,8 @@ export class CadastroEmpresaComponent implements OnInit {
     this.router.navigateByUrl('/home');
   }
 
+  edit(){
+    this.router.navigateByUrl('/edit-empresa');
+  }
+
 }

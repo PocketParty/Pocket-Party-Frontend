@@ -18,6 +18,7 @@ import { LojaComponent } from './presentation/loja/loja/loja.component';
 import { EditEmpresaComponent } from './presentation/cadastro/edit-empresa/edit-empresa.component';
 import { ProductModalComponent } from './shared/product-modal/product-modal.component';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { MatIconModule } from '@angular/material/icon';
 import { ShowProductModalComponent } from './shared/show-product-modal/show-product-modal.component';
 import { ViewButtonComponent } from './presentation/view-button/view-button.component';
 
@@ -43,7 +44,8 @@ import { ViewButtonComponent } from './presentation/view-button/view-button.comp
     BrowserAnimationsModule,
     MatDialogModule,
     FormsModule,
-    MatSlideToggleModule
+    MatSlideToggleModule,
+    MatIconModule
 
 ],
   providers: [],

@@ -1,5 +1,5 @@
 <div class="menu-topo">
-    <a href="/home">
+    <a (click)="getHome()" style="cursor: pointer;">
         <div class="logo-nome">
             <div>
                 <img src="../../assets/logo.png" class="logo">
@@ -8,10 +8,18 @@
         </div>
     </a>
 
-    <div class="buttons">
+<ng-container *ngIf="!signed()">
+  <div class="profile-icon">
+    <mat-icon class="mat-icon-large" style="color: var(--primary-color);"> person</mat-icon>
+  </div>
+</ng-container>
+
+
+ <ng-container  *ngIf="signed()">
+
+<div class="buttons">
       <button id="cadastro" class="botao" (click)="openModal()">Cadastre-se</button>
       <button id="login" class="botao" (click)="navigateToLogin()">Login</button>
-    </div>
 </div>
 
 <div class="modal" *ngIf="showModal" (click)="closeModal($event)">
@@ -19,3 +27,5 @@
     <app-cadastro-modal></app-cadastro-modal>
   </div>
 </div>
+
+</ng-container>
