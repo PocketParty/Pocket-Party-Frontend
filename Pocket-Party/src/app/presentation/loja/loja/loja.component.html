@@ -2,7 +2,11 @@
     <div class="logo_loja"><img src="https://auhekids.com.br/wp-content/uploads/2024/03/Desvendando-o-Codigo-da-Festa-Infantil-O-Segredo-do-Sucesso-1.jpg" alt=""></div>
     <div class="informacoes_textuais">
         <div class="upperside">
-            <div class="titulo_loja"><h1>Fulaninho LTDA</h1></div>
+            <div class="titulo_loja"><h1>Fulaninho LTDA</h1>
+                <a href="" target="_blank">
+                    <i class="fa fa-pencil" aria-hidden="true" id="editar"></i>
+                </a>
+            </div>
                 <div class="info">
                     <div class="informativo">Decoração</div>
                     <div class="informativo">Cerimonial/Serviços</div>
@@ -45,9 +49,15 @@
 </div>
 
 <div class="ourproducts">
-    <h1>Nossos Produtos</h1>
-
-    <input type="text" [(ngModel)]="searchText" class="search-bar" placeholder="Procure seu produto">
+    <div class="titulo_input">    
+        <div class="nossos_produtos">
+            <h1>Nossos Produtos</h1>
+            <a href="" target="_blank">
+                <i class="fa fa-pencil" aria-hidden="true" id="editar"></i>
+            </a>
+        </div>
+    </div>
+        <input type="text" [(ngModel)]="searchText" class="search-bar" placeholder="Procure seu produto">
     <div class="items">
         <div *ngFor="let item of filteredItems()" class="item-card">
             <!-- Imagem do item -->
@@ -55,8 +65,14 @@
             
             <!-- Nome do item -->
             <div class="item-details">
-            <h3>{{ item.name }}</h3>
-            <p class="item-price">{{ item.price | currency:'BRL' }}</p> <!-- Preço formatado -->
+                <h3>{{ item.name }}</h3>
+                <p class="item-price">{{ item.price | currency:'BRL' }}</p> <!-- Preço formatado -->
             </div>
+            <!-- Botões de categoria ou ação -->
+            <div class="item-tags">
+                <button class="tag-button">Categoria</button>
+                <button class="tag-button">Promoção</button>
+            </div>
+        </div>
     </div>
 </div>

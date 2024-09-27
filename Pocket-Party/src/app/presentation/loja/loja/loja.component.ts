@@ -16,7 +16,8 @@ export class LojaComponent implements OnInit {
   items: { name: string, price: number, image: string }[] = [
     { name: 'Aniversário', price: 500, image: 'assets/logo.png' },
     { name: 'Casamento', price: 1500, image: 'assets/logo.png' },
-    { name: 'Formatura', price: 1000, image: 'assets/logo.png' }
+    { name: 'Formatura', price: 1000, image: 'assets/logo.png' },
+    { name: '15 Anos', price: 1000, image: 'assets/logo.png' },
   ];
 
   // Texto digitado na barra de pesquisa

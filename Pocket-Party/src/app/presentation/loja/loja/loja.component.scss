@@ -2,6 +2,10 @@
     display: flex;
     align-items: center;
 }
+.titulo_loja{
+    display: flex;
+    align-items: center;    
+}
 
 img{
     height: 12rem;
@@ -99,24 +103,11 @@ h4{
     color: #6a0572;    
 }
 
-.ourproducts {
-    text-align: center;
-}
+
 h1{
     text-align: center;
 }
 
-.search-bar {
-    width: 100%;
-    max-width: 400px;
-    padding: 10px;
-    font-size: 1rem;
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-  }
-  
-  /* Estilo da lista de itens */
   .item-list {
     display: flex;
     flex-wrap: wrap;
@@ -140,28 +131,83 @@ h1{
   
   .items {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Ajuste o tamanho mínimo conforme necessário */
-    gap: 16px; /* Espaçamento entre os itens */
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Mantém o layout em grade */
+    gap: 16px; /* Espaçamento entre os cards */
+    padding: 16px; /* Espaçamento ao redor dos itens */
 }
 
 .item-card {
-    border: 1px solid #ccc; /* Borda opcional para destaque */
-    border-radius: 18px; /* Bordas arredondadas */
-    overflow: hidden; /* Esconde partes que saem do container */
-    background-color: #fff; /* Fundo branco para os cartões */
-    transition: transform 0.2s; /* Animação ao passar o mouse */
+    border: 1px solid #ccc;
+    border-radius: 18px;
+    overflow: hidden;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para destaque */
+    transition: transform 0.2s;
+    text-align: center;
 }
 
 .item-card:hover {
-    transform: scale(1.05); /* Efeito de zoom ao passar o mouse */
+    transform: scale(1.05);
 }
 
 .item-image {
-    width: 100%; /* Faz a imagem preencher a largura do cartão */
-    height: auto; /* Mantém a proporção da imagem */
+    width: 100%;
+    height: auto;
+    object-fit: cover;
 }
 
 .item-details {
-    padding: 16px; /* Espaçamento interno */
-    text-align: center; /* Centraliza o texto */
+    padding: 16px;
+    text-align: center;
+}
+
+.item-price {
+    font-size: 20px;
+    font-weight: bold;
+    color: #f43f5e; /* Destaque para o preço */
+}
+
+.item-tags {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 8px;
+}
+
+.tag-button {
+    background-color: #f87171;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    padding: 4px 12px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.tag-button:hover {
+    background-color: #f43f5e;
+}
+
+input{
+    margin: .4rem ;    
+    height: 1.7rem;
+    border: 1px solid var(--primary-color);
+    border-radius: 5px;
+    width: 22rem;
+}
+
+.nossos_produtos{
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.ourproducts {
+    text-align: center;
+}
+
+#editar{
+    align-items: center;
+    padding: 1rem;
+    color: var(--primary-color);
 }
