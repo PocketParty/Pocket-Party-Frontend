@@ -15,9 +15,9 @@ export class  
       const currentUrl = router.url;
       const isLoginPage = currentUrl === '/login';
       const isCadastroPage = currentUrl.includes('/cadastro');
+      const isEditPage = currentUrl.includes('/edit-empresa');
 
-
-      this.menuVisibilitySource.next(!isLoginPage && !isCadastroPage);
+      this.menuVisibilitySource.next(!isLoginPage && !isCadastroPage && !isEditPage);
     });
   }
 }

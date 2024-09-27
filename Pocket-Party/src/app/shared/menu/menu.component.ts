@@ -24,6 +24,18 @@ export class MenuComponent {
     }
   }
 
+  signed(){
+    return this.router.url.includes('home');
+  }
+
+  getHome(){
+    if (this.router.url.includes('home')){
+      this.router.navigateByUrl('/home');
+    } else{
+      this.router.navigateByUrl('/feed');
+    }
+  }
+
   navigateToLogin() {
     this.router.navigateByUrl('/login');
   }

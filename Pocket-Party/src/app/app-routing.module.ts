@@ -17,6 +17,15 @@ const routes: Routes = [
   },
   {path: 'feed',
     loadChildren: () => import('./presentation/feed/feed.module').then(m => m.FeedModule)
+  },
+  {path: 'loja/:id',
+    loadChildren: () => import('./presentation/loja/loja.module').then(m => m.LojaModule)
+  },
+  {path: 'edit-empresa',
+    loadChildren: () => import('./presentation/cadastro/edit-empresa/edit-empresa.module').then(m => m.EditEmpresaModule)
+  },
+  {path: 'view-button',
+    loadChildren: () => import('./presentation//view-button/view-button.module').then(m => m.ViewButtonModule)
   }
 ];
 

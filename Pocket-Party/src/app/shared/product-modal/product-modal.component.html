@@ -1,0 +1,62 @@
+<div>
+  <h1>Cadastrar Produto</h1>
+
+<div class="toggle-container">
+    <span [class.selected]="!isRent" (click)="selectSale()"><h2>Venda</h2></span>
+    <div class="toggle" [class.active]="isRent" (click)="toggleSelection()">
+      <div class="toggle-button" [class.active]="isRent"></div>
+    </div>
+    <span class="rent" [class.selected]="isRent" (click)="selectRent()"><h2>Aluguel</h2></span>
+  </div>
+</div>
+
+<div class="inputs">
+
+  <div class="row1">
+    <div class="inputLabel">
+      <label for="name">Nome</label>
+      <input type="text" placeholder="Nome" id="name" required>
+    </div>
+    <div class="subrow">  
+        <label for="profilePicture" class="custom-file-label">Foto de perfil</label>
+        <div class="custom-file-upload">
+          <input #fileInput type="file" id="profilePicture" class="file-input" accept="image/*" (change)="onFileSelected($event)">
+          <span class="file-name">{{ fileName }}</span>
+          <button class="file-browse" (click)="triggerFileInputClick()">Pesquisar</button>
+        </div>
+    </div>
+    <div class="preco">
+      <label for="preco" class="tag-preco">Preço</label>
+      <input type="number" id="preco" class="preco-input">
+      <div class="check-orcamento">
+        <input type="checkbox" id="check-orcamento">
+        <span id="pororcamento">Por Orçamento</span>
+      </div>
+    </div>
+  </div>
+  
+
+  <div class="row2">
+    <div class="descricao">
+      <label for="descricao">Descrição</label>
+      <input type="text" placeholder="Descrição" id="descricao" required maxlength="300">
+    </div>
+  </div>
+
+  <div class="row5">
+    <div class="event-selection">
+        <p>Quais eventos realiza?</p>
+        <div class="button-group">
+            <button 
+                *ngFor="let event of events"
+                [ngClass]="{'selected': selectedEvents.includes(event)}"
+                (click)="toggleSelectionEvent(event)">
+                {{ event }}
+            </button>
+        </div>
+    </div>
+  </div>
+</div>
+
+
+

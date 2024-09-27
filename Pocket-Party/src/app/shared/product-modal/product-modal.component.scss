@@ -1,0 +1,329 @@
+/* Toggle container */
+.toggle-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Span cursor pointer */
+span {
+  cursor: pointer;
+  color: var(--warning-color);
+}
+
+/* Toggle switch */
+.toggle {
+  display: inline-block;
+  position: relative;
+  width: 60px;
+  height: 25px;
+  margin: 0 10px;
+  border: 3px solid var(--warning-color);
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+/* Toggle button circle */
+.toggle-button {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 21px;
+  height: 21px;
+  background-color: var(--warning-color);
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+/* Toggle button when active */
+.toggle-button.active {
+  left: 35px;
+  background-color: var(--alternative-color);
+}
+
+/* Toggle active border color */
+.toggle.active {
+  border: 3px solid var(--alternative-color);
+}
+
+/* Rent label color */
+.rent {
+  color: var(--alternative-color);
+}
+
+/* Section title */
+h2 {
+  font-family: "Playfair Display", serif;
+}
+
+/* Input container */
+.inputs {
+  display: grid;
+  justify-items: start;
+  align-content: stretch;
+  justify-content: center;
+}
+
+/* Individual input label */
+.inputLabel {
+  display: flex;
+  justify-items: start;
+  flex-direction: column;
+  align-items: baseline;
+}
+
+/* Ajuste do layout de inputs e descrição */
+.row1{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr; /* Três colunas iguais */
+  gap: 20px; /* Espaçamento entre os elementos */
+  width: 100%;
+  justify-items: start;
+  align-items: start; /* Alinha todos os elementos verticalmente */
+}
+
+.row2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Define 2 colunas: uma para Preço e Descrição */
+  gap: 20px;
+  width: 100%;
+  align-items: center; /* Alinha verticalmente */
+}
+
+/* Ajuste da área de Descrição */
+.descricao {
+  display: flex;
+  grid-column: span 3;
+  width: 100%;
+  flex-direction: column;
+  align-items: baseline;
+}
+
+/* Ajuste de input de preço e nome */
+input {
+  width: 100%;
+  box-sizing: border-box; /* Certifica-se de que a largura inclui o padding e bordas */
+  margin-left: 0.6rem;
+  font-family: "Inter", serif;
+  color: var(--primary-color);
+}
+input[type="text"], input[type="number"] {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Container para descrição */
+#descricao {
+  display: block;
+  width: 100%;
+  margin-top: 10px;
+}
+
+/* Input style */
+input {
+  margin: .4rem;
+  height: 1.7rem;
+  border: 1px solid var(--primary-color);
+  border-radius: 5px;
+}
+
+/* Input focus */
+input:focus {
+  outline: 1px solid var(--primary-color);
+}
+
+/* Textarea container */
+.textarea-container {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+}
+
+/* Textarea resize settings */
+textarea {
+  resize: vertical;
+  padding: 10px;
+  font-size: 14px;
+  min-height: 50px;
+  max-height: 100px;
+}
+
+/* Character count for textarea */
+.char-count {
+  font-size: 12px;
+  color: #666;
+  text-align: right;
+  margin-top: 5px;
+}
+
+/* Custom file label */
+custom-file-label {
+  display: block;
+  font-size: 14px;
+  color: #1a73e8;
+  margin-bottom: 8px;
+}
+
+/* Custom file upload container */
+.custom-file-upload {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  overflow: hidden;
+  max-width: 300px;
+  margin: .4rem auto;
+  position: relative;
+}
+
+/* Hidden file input */
+.file-input {
+  opacity: 0;
+  position: absolute;
+  z-index: -1;
+  max-width: 100%;
+}
+
+/* File name display */
+.file-name {
+  padding: 8px 12px;
+  font-size: 14px;
+  color: black;
+  background-color: var(--our-white-color);
+  border-right: 1px solid #ccc;
+  flex-grow: 1;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+/* File browse button */
+.file-browse {
+  padding: 8px 16px;
+  font-size: 14px;
+  background-color: var(--our-white-color);
+  border: none;
+  cursor: pointer;
+  color: #5f6368;
+  transition: background-color 0.2s ease-in-out;
+}
+
+label{
+  color: var(--primary-color);
+}
+
+/* Hover effect on file browse */
+.file-browse:hover {
+  background-color: #d6d9dc;
+}
+
+/* Active effect on file browse */
+.file-browse:active {
+  background-color: #c2c6c9;
+}
+
+/* Subrow layout */
+.subrow {
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+}
+
+/* Check orcamento row */
+#check-orcamento {
+  display: flex;
+  flex-direction: row;
+  outline: none;
+}
+
+/* Check orcamento style */
+.check-orcamento {
+  display: flex;
+  align-items: center;
+  gap: 5px; /* Ajusta o espaçamento entre a checkbox e a label */
+  margin-top: 0.4rem;
+}
+#check-orcamento:hover{
+  cursor:pointer;
+}
+#pororcamento:hover{
+  cursor:default;
+}
+
+/* Preco layout */
+.preco {
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  width: 100%; /* Ajusta a largura do input de Preço */
+}
+
+/* Button group container */
+.button-group {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 100%;
+  justify-content: center;
+  gap: 10px;
+}
+
+/* Button style inside the group */
+.button-group button {
+  background-color: #f1f1f1;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  padding: 8px 16px;
+  font-size: 14px;
+  color: #555;
+  cursor: pointer;
+  margin: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Selected button style */
+.button-group button.selected {
+  background-color: var(--primary-color);
+  color: var(--our-white-color);
+  border-color: var(--primary-color);
+}
+
+/* Hover effect on buttons */
+.button-group button:hover {
+  color: var(--our-white-color);
+  background-color: var(--primary-color);
+}
+
+/* Event selection title */
+.event-selection p {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: var(--primary-color);
+}
+
+/* Checkbox styling */
+input[type="checkbox"] {
+  width: auto;
+  margin: 0;
+  outline: none;
+}
+
+
+/* Checkbox focus */
+input[type="checkbox"]:focus {
+  outline: none;
+}
+
+/* Custom checkbox label */
+.custom-checkbox {
+  font-weight: bold;
+  color: var(--primary-color);
+  margin-left: 5px;
+}
+
+/* Hover effects on buttons */
+button:hover,
+.custom-file-upload:hover,
+.file-browse:hover {
+  transition: all 0.3s ease;
+}
