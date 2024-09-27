@@ -1,0 +1,104 @@
+.toggle-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+span {
+  cursor: pointer;
+  color: var(--warning-color);
+}
+
+.toggle {
+  display: inline-block;
+  position: relative;
+  width: 60px;
+  height: 25px;
+  margin: 0 10px;
+  border: 3px solid var(--warning-color);
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.toggle-button {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 21px;
+  height: 21px;
+  background-color: var(--warning-color);
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.toggle-button.active {
+  left: 35px;
+  background-color:  var(--alternative-color);
+}
+
+.toggle.active {
+  border: 3px solid var(--alternative-color);
+}
+
+.rent{
+  color:  var(--alternative-color);
+}
+
+h2{
+  font-family: "Playfair Display", serif;
+}
+
+.inputs{
+  display: grid;
+  justify-items: start;
+  align-content: stretch;
+  justify-content: center;
+}
+
+.inputLabel{
+  display: grid;
+  justify-items: start;
+}
+
+.row{
+  display: flex;
+  flex-direction: row;
+}
+
+label{
+  margin-left: 0.6rem;
+  font-family: "Inter", serif;
+  color: var(--primary-color);
+}
+
+input{
+  margin: .4rem ;
+  height: 1.7rem;
+  border: 1px solid var(--primary-color);
+  border-radius: 5px;
+}
+
+input:focus{
+  outline: 1px solid var(--primary-color);
+}
+
+.textarea-container {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+}
+
+textarea {
+  resize: vertical; /* Permite redimensionar apenas verticalmente */
+  padding: 10px;
+  font-size: 14px;
+  min-height: 50px;
+  max-height: 100px;
+}
+
+.char-count {
+  font-size: 12px;
+  color: #666;
+  text-align: right;
+  margin-top: 5px;
+}

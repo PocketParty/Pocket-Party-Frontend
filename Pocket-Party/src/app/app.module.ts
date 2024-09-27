@@ -16,6 +16,8 @@ import { FeedComponent } from './presentation/feed/feed.component';
 import { CadastroModalComponent } from './shared/cadastro-modal/cadastro-modal.component';
 import { LojaComponent } from './presentation/loja/loja/loja.component';
 import { EditEmpresaComponent } from './presentation/cadastro/edit-empresa/edit-empresa.component';
+import { ProductModalComponent } from './shared/product-modal/product-modal.component';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 
 @NgModule({
   declarations: [
@@ -28,15 +30,18 @@ import { EditEmpresaComponent } from './presentation/cadastro/edit-empresa/edit-
     FeedComponent,
     CadastroModalComponent,
     LojaComponent,
-    EditEmpresaComponent
+    EditEmpresaComponent,
+    ProductModalComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatDialogModule,
-    FormsModule
-  ],
+    FormsModule,
+    MatSlideToggleModule
+
+],
   providers: [],
   bootstrap: [AppComponent]
 })
