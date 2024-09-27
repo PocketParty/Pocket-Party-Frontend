@@ -34,7 +34,7 @@
 
 <div class="categories">
   <h1>Empresas na sua região</h1>
-  <div style="display: flex; flex-wrap: wrap;">
+  <div style="display: flex; flex-wrap: wrap;justify-content: space-evenly;">
     <ng-container *ngFor="let item of items">
       <button type="hidden" (click)="goToLoja(item)" style="background: none;border: none;">
         <div class="empresa">
