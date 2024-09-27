@@ -36,7 +36,8 @@
   <h1>Empresas na sua região</h1>
   <div style="display: flex; flex-wrap: wrap;">
     <ng-container *ngFor="let item of items">
-      <div class="empresa">
+      <button type="hidden" (click)="openModal(item)" style="background: none;border: none;">
+        <div class="empresa">
         <img src="https://auhekids.com.br/wp-content/uploads/2024/03/Desvendando-o-Codigo-da-Festa-Infantil-O-Segredo-do-Sucesso-1.jpg" alt="">
         <h3>{{item}}</h3>
         <div style="display: flex; flex-wrap: wrap; justify-content: space-evenly;">
@@ -48,6 +49,11 @@
           <div style="margin-bottom: 1rem;"><div class="labelCat4"><h5>Decoração</h5></div></div>
         </div>
       </div>
+    </button>
     </ng-container>
   </div>
+  <div class="modal" *ngIf="showModal" (click)="closeModal($event)">
+    <div class="modal-content">
+      <app-show-product-modal [data]="product"></app-show-product-modal>
+    </div>
 </div>
