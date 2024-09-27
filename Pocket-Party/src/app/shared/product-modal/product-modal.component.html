@@ -1,0 +1,38 @@
+<div>
+  <h1>Cadastrar Produto</h1>
+
+<div class="toggle-container">
+    <span [class.selected]="!isRent" (click)="selectSale()"><h2>Venda</h2></span>
+    <div class="toggle" [class.active]="isRent" (click)="toggleSelection()">
+      <div class="toggle-button" [class.active]="isRent"></div>
+    </div>
+    <span class="rent" [class.selected]="isRent" (click)="selectRent()"><h2>Aluguel</h2></span>
+  </div>
+</div>
+
+<div class="inputs">
+
+  <div class="row">
+    <div class="inputLabel">
+      <label for="name">Nome</label>
+      <input type="text" placeholder="Nome" id="name" required>
+    </div>
+    <input type="text" placeholder="Nome" id="name" required>
+
+
+  </div>
+
+  <div class="row">
+    <div class="inputLabel">
+      <label for="name">Descrição</label>
+      <input type="text" placeholder="Descrição"
+      id="descricao" required maxlength="300" style="height: 3rem;">
+    </div>
+  </div>
+
+  <div class="row">
+      <input type="text" placeholder="Endereço" id="endereco" required>
+  </div>
+
+
+</div>

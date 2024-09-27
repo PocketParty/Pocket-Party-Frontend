@@ -4,7 +4,7 @@
 }
 .titulo_loja{
     display: flex;
-    align-items: center;    
+    align-items: center;
 }
 
 img{
@@ -58,12 +58,12 @@ h4{
     margin: .2rem;
     color: white;
     padding: .3rem 1rem;
-    border-radius: 50px;   
+    border-radius: 50px;
     font-family: 'Inter', sans-serif;
     text-align: center;
-    white-space: nowrap;    
+    white-space: nowrap;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    display: inline-block; 
+    display: inline-block;
     transition: background-color 0.3s ease-in-out;
 }
 
@@ -80,27 +80,27 @@ h4{
 }
 
 .selecao_produtos {
-    display: flex;             
-    justify-content: center;   
-    flex-wrap: wrap;          
-    gap: 10px;               
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
 .contatos {
     display: flex;
-    justify-content: center; 
-    gap: 20px;                
-    margin-top: 20px;       
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
 }
 
 .contatos a {
-    color: #007bff;           
-    font-size: 2rem;        
-    transition: color 0.3s ease-in-out; 
+    color: #007bff;
+    font-size: 2rem;
+    transition: color 0.3s ease-in-out;
 }
 
 .contatos a:hover {
-    color: #6a0572;    
+    color: #6a0572;
 }
 
 
@@ -113,7 +113,7 @@ h1{
     flex-wrap: wrap;
     gap: 10px;
   }
-  
+
   .item-list div {
     background-color: #007bff;
     color: white;
@@ -128,7 +128,7 @@ h1{
     .hidden {
     display: none;
   }
-  
+
   .items {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Mantém o layout em grade */
@@ -189,7 +189,7 @@ h1{
 }
 
 input{
-    margin: .4rem ;    
+    margin: .4rem ;
     height: 1.7rem;
     border: 1px solid var(--primary-color);
     border-radius: 5px;
@@ -210,4 +210,24 @@ input{
     align-items: center;
     padding: 1rem;
     color: var(--primary-color);
+}
+
+.modal {
+  position: fixed; /* Posiciona o modal em relação à janela */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Fundo escurecido semitransparente */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: rgb(83 76 85) 0px 2px 9px 2px;
+  /* Adicione outros estilos para personalizar o conteúdo do modal */
 }

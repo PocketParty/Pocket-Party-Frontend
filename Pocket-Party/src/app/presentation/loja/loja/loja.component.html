@@ -1,8 +1,8 @@
 <div class="desc_loja">
-    <div class="logo_loja"><img src="https://auhekids.com.br/wp-content/uploads/2024/03/Desvendando-o-Codigo-da-Festa-Infantil-O-Segredo-do-Sucesso-1.jpg" alt=""></div>
+    <div class="logo_loja"><img src="{{profilePicture}}" alt=""></div>
     <div class="informacoes_textuais">
         <div class="upperside">
-            <div class="titulo_loja"><h1>Fulaninho LTDA</h1>
+            <div class="titulo_loja"><h1>{{name}}</h1>
                 <a href="" target="_blank">
                     <i class="fa fa-pencil" aria-hidden="true" id="editar"></i>
                 </a>
@@ -15,7 +15,7 @@
         </div>
 
         <div class="texto_loja">
-            <h4>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</h4>
+            <h4>{{descipiton}}</h4>
         </div>
     </div>
 </div>
@@ -49,11 +49,11 @@
 </div>
 
 <div class="ourproducts">
-    <div class="titulo_input">    
+    <div class="titulo_input">
         <div class="nossos_produtos">
-            <h1>Nossos Produtos</h1>
-            <a href="" target="_blank">
-                <i class="fa fa-pencil" aria-hidden="true" id="editar"></i>
+            <h1>{{label}}</h1>
+            <a (click)="openModal()" target="_blank">
+                <i class="fa fa-plus-circle" aria-hidden="true" id="editar"></i>
             </a>
         </div>
     </div>
@@ -62,7 +62,7 @@
         <div *ngFor="let item of filteredItems()" class="item-card">
             <!-- Imagem do item -->
             <img [src]="item.image" alt="{{ item.name }}" class="item-image">
-            
+
             <!-- Nome do item -->
             <div class="item-details">
                 <h3>{{ item.name }}</h3>
@@ -75,4 +75,8 @@
             </div>
         </div>
     </div>
+    <div class="modal" *ngIf="showModal" (click)="closeModal($event)">
+      <div class="modal-content">
+        <app-product-modal></app-product-modal>
+      </div>
 </div>
