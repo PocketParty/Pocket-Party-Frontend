@@ -1,8 +1,18 @@
 <div class="details">
   <img src="{{data.image}}" alt="">
   <div class="info">
-    <h1>{{data.name}}</h1>
+    <div>
+      <h1 style="margin: 0;">{{data.name}}</h1>
+      <h2>{{value}}</h2>
+    </div>
     <h3>{{data.descripition}}</h3>
-    <h2>{{value}}</h2>
   </div>
+</div>
+<div class="tags">
+  <div class="labelCat3" *ngIf="data.category[0]" style="margin-bottom: 1rem;"><h5>Balões</h5></div>
+  <div class="labelCat4" *ngIf="data.category[1]" style="margin-bottom: 1rem;"><h5>Serviços</h5></div>
+  <div class="labelCat3" *ngIf="data.category[2]" style="margin-bottom: 1rem;"><h5>Bebidas</h5></div>
+  <div class="labelCat4" *ngIf="data.category[3]" style="margin-bottom: 1rem;"><h5>Buffet</h5></div>
+  <div class="labelCat3" *ngIf="data.category[4]" style="margin-bottom: 1rem;"><h5>Descartáveis</h5></div>
+  <div class="labelCat4" *ngIf="data.category[5]" style="margin-bottom: 1rem;"><h5>Decoração</h5></div>
 </div>

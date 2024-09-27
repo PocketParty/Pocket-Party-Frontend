@@ -3,8 +3,9 @@ img{
 }
 
 h2{
-  font-family: " Quicksand", serif;
+  font-family: "Quicksand", sans-serif;
   color: var(--warning-color);
+  font-size: xx-large;
 }
 
 h3{
@@ -18,5 +19,37 @@ h3{
 }
 
 .info{
-  margin: 2rem;
+  margin: 2rem 2rem 0 2rem;
+}
+
+.labelCat3{
+  font-family: "Inter";
+  font-size: 14px;
+  color: rgb(255, 255, 255);
+  transition: 2s;
+  width: 5rem;
+  border-radius: 50px;
+  background: rgb(255, 145, 123);
+}
+
+.labelCat4{
+  font-family: "Inter";
+  font-size: 14px;
+  color: rgb(255, 255, 255);
+  transition: 2s;
+  width: 5rem;
+  border-radius: 50px;
+  background: rgb(28, 124, 226);
+}
+
+h5{
+  margin: 0;
+}
+
+.tags{
+  display: flex;
+  justify-items: center;
+  margin: 1rem 0 00;
+  justify-content: space-evenly;
+  align-items: center;
 }
