@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 
 import { FormsModule } from '@angular/forms';  // Importação necessária para o ngModel
 
@@ -45,7 +46,8 @@ import { ViewButtonComponent } from './presentation/view-button/view-button.comp
     MatDialogModule,
     FormsModule,
     MatSlideToggleModule,
-    MatIconModule
+    MatIconModule,
+	HttpClientModule
 
 ],
   providers: [],

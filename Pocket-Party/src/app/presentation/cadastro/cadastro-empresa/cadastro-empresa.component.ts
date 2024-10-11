@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-cadastro-empresa',
@@ -10,6 +11,7 @@ export class CadastroEmpresaComponent implements OnInit {
 
   constructor(
     private router: Router,
+	private http: HttpClient
   ) {}
 
   ngOnInit() {
@@ -20,7 +22,21 @@ export class CadastroEmpresaComponent implements OnInit {
   }
 
   edit(){
-    this.router.navigateByUrl('/edit-empresa');
+    this.http.post('http://localhost:3000/empresas/adicionar', {
+      nome: (document.getElementById('nome') as HTMLInputElement).value,
+      cnpj: (document.getElementById('cnpj') as HTMLInputElement).value,
+      telefone: (document.getElementById('telefone') as HTMLInputElement).value,
+      cep: (document.getElementById('cep') as HTMLInputElement).value,
+      endereco: (document.getElementById('endereco') as HTMLInputElement).value,
+      username: (document.getElementById('username') as HTMLInputElement).value,
+      email: (document.getElementById('email') as HTMLInputElement).value,
+      senha: (document.getElementById('senha') as HTMLInputElement).value,
+    }).subscribe(response => {
+      console.log(response);
+      this.router.navigateByUrl('/edit-empresa');
+    }, error => {
+      console.error(error);
+    });
   }
 
 }
