@@ -31,12 +31,18 @@ export class CadastroEmpresaComponent implements OnInit {
       username: (document.getElementById('username') as HTMLInputElement).value,
       email: (document.getElementById('email') as HTMLInputElement).value,
       senha: (document.getElementById('senha') as HTMLInputElement).value,
-    }).subscribe(response => {
-      console.log(response);
-      this.router.navigateByUrl('/edit-empresa');
-    }, error => {
-      console.error(error);
-    });
+    }).subscribe({
+		next: (response) => {
+		  console.log(response);
+		  this.router.navigateByUrl('/edit-empresa');
+		},
+		error: (error) => {
+		  console.error(error);
+		},
+		complete: () => {
+		  console.log('Request completed');
+		}
+	  });
   }
 
 }
