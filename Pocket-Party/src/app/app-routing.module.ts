@@ -21,7 +21,7 @@ const routes: Routes = [
   {path: 'loja/:id',
     loadChildren: () => import('./presentation/loja/loja.module').then(m => m.LojaModule)
   },
-  {path: 'edit-empresa',
+  {path: 'edit-empresa/:id',
     loadChildren: () => import('./presentation/cadastro/edit-empresa/edit-empresa.module').then(m => m.EditEmpresaModule)
   },
   {path: 'view-button',
