@@ -1,4 +1,6 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-edit-empresa',
@@ -11,12 +13,25 @@ export class EditEmpresaComponent implements OnInit {
   atuacaoSelected: string[] = []; // Array to store selected 'Atuação' options
   events: string[] = ['Aniversário', 'Formatura', 'Festa Infantil', 'Pool Party', 'Casamento', 'Noivado', 'Cerimônias Religiosas'];
   selectedEvents: string[] = []; // Array for selected event types
+  whatsappLink: string = '';
+  facebookLink: string = '';
+  instagramLink: string = '';
+  descricao: string = '';
+  empresaId!: string; // Armazena o ID da empresa
 
   @ViewChild('fileInput') fileInput!: ElementRef;
 
-  constructor() {}
+  constructor(
+	private route: ActivatedRoute, // Injeta o serviço ActivatedRoute
+    private http: HttpClient // Para fazer requisições HTTP
+  ) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    // Captura o ID da empresa da URL, se necessário
+    this.route.paramMap.subscribe(params => {
+    this.empresaId = params.get('id') || ''; // Pega o ID da empresa na rota, se existir
+    });
+  }
 
 
   onFileSelected(event: Event): void {
@@ -50,5 +65,27 @@ export class EditEmpresaComponent implements OnInit {
     } else {
       this.atuacaoSelected.splice(index, 1);
     }
+  }
+
+  // Handle Save Button
+  onSave(): void {
+	this.http.patch<any>(`http://localhost:3000/empresas/edit-empresa/${this.empresaId}`, {
+	  atuacao: this.atuacaoSelected,
+	  eventos: this.selectedEvents,
+	  whatsappLink: (document.getElementById('whatsapp') as HTMLInputElement).value,
+	  facebookLink: (document.getElementById('facebook') as HTMLInputElement).value,
+	  instagramLink: (document.getElementById('instagram') as HTMLInputElement).value,
+	  descricao: (document.getElementById('descricao') as HTMLInputElement).value,
+	}).subscribe({
+	  next: (response) => {
+		console.log('Empresa atualizada com sucesso:', response);
+	  },
+	  error: (error) => {
+		console.error('Erro ao atualizar empresa:', error);
+	  },
+	  complete: () => {
+		console.log('Request completed');
+	  }
+	});
   }
 }

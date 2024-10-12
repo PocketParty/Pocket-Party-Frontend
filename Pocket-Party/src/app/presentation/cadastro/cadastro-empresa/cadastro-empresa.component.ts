@@ -22,7 +22,7 @@ export class CadastroEmpresaComponent implements OnInit {
   }
 
   edit(){
-    this.http.post('http://localhost:3000/empresas/adicionar', {
+    this.http.post<any>('http://localhost:3000/empresas/adicionar', {
       nome: (document.getElementById('nome') as HTMLInputElement).value,
       cnpj: (document.getElementById('cnpj') as HTMLInputElement).value,
       telefone: (document.getElementById('telefone') as HTMLInputElement).value,
@@ -33,8 +33,8 @@ export class CadastroEmpresaComponent implements OnInit {
       senha: (document.getElementById('senha') as HTMLInputElement).value,
     }).subscribe({
 		next: (response) => {
-		  console.log(response);
-		  this.router.navigateByUrl('/edit-empresa');
+		  const empresaId = response.id;
+		  this.router.navigateByUrl(`/edit-empresa/${empresaId}`);
 		},
 		error: (error) => {
 		  console.error(error);
