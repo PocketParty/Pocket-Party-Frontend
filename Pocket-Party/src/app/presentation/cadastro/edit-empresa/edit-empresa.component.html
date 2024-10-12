@@ -29,21 +29,21 @@
         <div class="row3">
             <div class="whatsapp">
                 <label for="whatsapp">Link para Whatsapp</label>
-                <input type="url" placeholder="Link para Whatsapp" id="whatsapp">
+                <input type="url" placeholder="Link para Whatsapp" id="whatsapp"[(ngModel)]="whatsappLink">
             </div>
             <div class="facebook">
                 <label for="facebook">Link para Facebook</label>
-                <input type="url" placeholder="Link para Facebook" id="facebook">
+                <input type="url" placeholder="Link para Facebook" id="facebook"[(ngModel)]="facebookLink">
             </div>
             <div class="instagram">
                 <label for="instagram">Link para Instagram</label>
-                <input type="url" placeholder="Link para Instagram" id="instagram">
+                <input type="url" placeholder="Link para Instagram" id="instagram"[(ngModel)]="instagramLink">
             </div>
         </div>
 
         <div class="row4">
             <label for="descricao">Descrição</label>
-            <input type="text" id="descricao" placeholder="Descrição">
+            <input type="text" id="descricao" placeholder="Descrição"[(ngModel)]="descricao">
         </div>
 
         <!-- Seção para Seleção de Eventos -->
@@ -63,6 +63,6 @@
     </div>
 
     <div class="botoes">
-        <button type="submit" id="salvar">Salvar</button>
+        <button type="submit" id="salvar"(click)="onSave()">Salvar</button>
     </div>
 </div>
