@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
+import { Router } from '@angular/router';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
@@ -23,6 +24,7 @@ export class EditEmpresaComponent implements OnInit {
 
   constructor(
 	private route: ActivatedRoute, // Injeta o serviço ActivatedRoute
+	private router: Router,
     private http: HttpClient // Para fazer requisições HTTP
   ) {}
 
@@ -79,6 +81,7 @@ export class EditEmpresaComponent implements OnInit {
 	}).subscribe({
 	  next: (response) => {
 		console.log('Empresa atualizada com sucesso:', response);
+		this.router.navigateByUrl('/login');
 	  },
 	  error: (error) => {
 		console.error('Erro ao atualizar empresa:', error);
