@@ -34,7 +34,6 @@ export class FeedComponent implements OnInit {
 				descripition: empresa.descricao,
 				type: 'STORE',
 				category: [true, false, true, false, true, true, true], // Exemplo, ajuste conforme necessário
-				image: 'https://placekitten.com/300/200' // Adicione uma imagem padrão ou a partir da resposta
 			}));
 			
 			// Envia os dados mapeados para o StoreService
