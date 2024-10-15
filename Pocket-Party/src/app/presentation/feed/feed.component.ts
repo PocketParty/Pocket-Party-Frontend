@@ -23,6 +23,7 @@ export class FeedComponent implements OnInit {
 
   items: any;
 
+
   ngOnInit(): void {
 	this.http.get<any>(`${environment.apiUrl}/empresas/pesquisar/todas`, {}).subscribe({
 		next: (response) => {
@@ -34,11 +35,12 @@ export class FeedComponent implements OnInit {
 				name: empresa.nome,
 				descripition: empresa.descricao,
 				type: 'STORE',
-				category: [true, false, true, false, true, true, true], // Exemplo, ajuste conforme necessário
+				image: 'https://auhekids.com.br/wp-content/uploads/2024/03/Desvendando-o-Codigo-da-Festa-Infantil-O-Segredo-do-Sucesso-1.jpg',
 			}));
 			
 			// Envia os dados mapeados para o StoreService
 			this.storeService.setStores(mappedStores);
+			this.items = this.storeService.getStores();
 		},
 		error: (error) => {
 			console.error('Erro ao pesquisar empresa:', error);
@@ -47,7 +49,6 @@ export class FeedComponent implements OnInit {
 			console.log('Request completed');
 		}
 	});
-	this.items = this.storeService.getStores();
 	
   }
 
