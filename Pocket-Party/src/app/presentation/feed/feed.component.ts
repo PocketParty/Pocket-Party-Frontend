@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { StoreService } from 'src/app/shared/services/store.service';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-feed',
@@ -23,7 +24,7 @@ export class FeedComponent implements OnInit {
   items: any;
 
   ngOnInit(): void {
-	this.http.get<any>(`http://localhost:3000/empresas/pesquisar/todas`, {}).subscribe({
+	this.http.get<any>(`${environment.apiUrl}/empresas/pesquisar/todas`, {}).subscribe({
 		next: (response) => {
 			console.log('Empresas pesquisada com sucesso:', response);
 			

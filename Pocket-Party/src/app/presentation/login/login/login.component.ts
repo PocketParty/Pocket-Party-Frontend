@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-login',
@@ -22,7 +23,7 @@ export class LoginComponent implements OnInit{
   }
 
   submit() {
-    this.http.post<any>('http://localhost:3000/auth/login/empresa', {
+    this.http.post<any>(`${environment.apiUrl}/auth/login/empresa`, {
       email: (document.getElementById('email') as HTMLInputElement).value,
       senha: (document.getElementById('senha') as HTMLInputElement).value,
     }).subscribe({

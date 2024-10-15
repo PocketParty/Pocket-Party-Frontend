@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { Router } from '@angular/router';
 import { ActivatedRoute } from '@angular/router';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-edit-empresa',
@@ -71,7 +72,7 @@ export class EditEmpresaComponent implements OnInit {
 
   // Handle Save Button
   onSave(): void {
-	this.http.patch<any>(`http://localhost:3000/empresas/edit-empresa/${this.empresaId}`, {
+	this.http.patch<any>(`${environment.apiUrl}/empresas/edit-empresa/${this.empresaId}`, {
 	  atuacao: this.atuacaoSelected,
 	  eventos: this.selectedEvents,
 	  whatsappLink: (document.getElementById('whatsapp') as HTMLInputElement).value,
