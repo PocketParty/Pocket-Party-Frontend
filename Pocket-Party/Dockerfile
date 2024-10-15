@@ -1,5 +1,5 @@
 # Usar uma imagem do Node.js como base
-FROM node:16-alpine
+FROM node:20
 
 # Definir o diretório de trabalho dentro do container
 WORKDIR /app
@@ -13,11 +13,8 @@ RUN npm install
 # Copiar o código da aplicação para o container
 COPY . .
 
-# Build da aplicação Angular
-RUN npm run build
-
 # Expor a porta em que o servidor irá rodar
-EXPOSE 3030
+EXPOSE 4200
 
-# Iniciar o servidor
-CMD ["npm", "start"]
+
+CMD ["npm", "start", "--", "--host", "0.0.0.0"]
