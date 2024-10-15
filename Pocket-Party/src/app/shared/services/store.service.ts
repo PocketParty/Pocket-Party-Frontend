@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
 })
 export class StoreService {
   private stores = [ {
-      id: '1',
+      id: '1000',
       name: 'Super Festas',
       type: 'STORE',
       descripition: '',
@@ -24,7 +24,7 @@ export class StoreService {
       ]
     },
     {
-      id: '2',
+      id: '2000',
       name: 'Festas CG',
       type: 'STORE',
       descripition: '',
@@ -43,7 +43,7 @@ export class StoreService {
       ]
     },
     {
-      id: '3',
+      id: '3000',
       name: 'Mega Festas',
       type: 'STORE',
       descripition: '',
@@ -62,7 +62,7 @@ export class StoreService {
       ]
     },
     {
-      id: '4',
+      id: '4000',
       name: 'Super Buffet',
       type: 'SERVICE',
       descripition: '',
@@ -81,7 +81,7 @@ export class StoreService {
       ]
     },
     {
-      id: '5',
+      id: '5000',
       name: 'Best Party',
       type: 'STORE',
       descripition: '',
@@ -108,5 +108,10 @@ export class StoreService {
 
   getStores(){
     return this.stores;
+  }
+
+  // Método para definir as lojas
+  setStores(stores: any[]): void {
+	this.stores = [...this.stores, ...stores];
   }
 }

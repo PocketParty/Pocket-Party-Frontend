@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-cadastro-empresa',
@@ -22,7 +23,7 @@ export class CadastroEmpresaComponent implements OnInit {
   }
 
   edit(){
-    this.http.post<any>('http://localhost:3000/empresas/adicionar', {
+    this.http.post<any>(`${environment.apiUrl}/empresas/adicionar`, {
       nome: (document.getElementById('nome') as HTMLInputElement).value,
       cnpj: (document.getElementById('cnpj') as HTMLInputElement).value,
       telefone: (document.getElementById('telefone') as HTMLInputElement).value,
