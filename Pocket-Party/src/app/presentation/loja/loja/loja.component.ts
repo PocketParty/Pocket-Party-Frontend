@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { StoreService } from 'src/app/shared/services/store.service';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -10,7 +11,7 @@ import { StoreService } from 'src/app/shared/services/store.service';
 })
 export class LojaComponent implements OnInit {
 
-  constructor(private route: ActivatedRoute, private storeService: StoreService) {}
+  constructor(private route: ActivatedRoute, private storeService: StoreService, private router: Router) {}
 
   showModal = false;
   showProductModal = false;
@@ -67,6 +68,10 @@ export class LojaComponent implements OnInit {
     this.product= produto;
     console.log(produto)
     this.showProductModal = true;
+  }
+
+  editar(item: any) {
+    this.router.navigate(['/edit-empresa', item.id])
   }
 
 
