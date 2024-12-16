@@ -74,14 +74,10 @@ export class EditEmpresaComponent implements OnInit {
   onSave(): void {
 	this.http.patch<any>(`${environment.apiUrl}/empresas/edit-empresa/${this.empresaId}`, {
 	  atuacao: this.atuacaoSelected,
-	  eventos: this.selectedEvents,
-	  whatsappLink: (document.getElementById('whatsapp') as HTMLInputElement).value,
-	  facebookLink: (document.getElementById('facebook') as HTMLInputElement).value,
-	  instagramLink: (document.getElementById('instagram') as HTMLInputElement).value,
+	  tags: this.selectedEvents,
 	  descricao: (document.getElementById('descricao') as HTMLInputElement).value,
 	}).subscribe({
 	  next: (response) => {
-		console.log('Empresa atualizada com sucesso:', response);
 		this.router.navigateByUrl('/login');
 	  },
 	  error: (error) => {
