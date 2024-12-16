@@ -31,8 +31,8 @@ export class FeedComponent implements OnInit {
 			
 			// Mapeia os dados da resposta para o formato desejado
 			const mappedStores = response.map((empresa: any) => ({
-				id: empresa.id.toString(),
-				name: empresa.nome,
+				id: empresa.enterprise_id.toString(),
+				name: empresa.name,
 				descripition: empresa.descricao,
 				type: 'STORE',
 				image: 'https://auhekids.com.br/wp-content/uploads/2024/03/Desvendando-o-Codigo-da-Festa-Infantil-O-Segredo-do-Sucesso-1.jpg',
