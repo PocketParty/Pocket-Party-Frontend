@@ -24,7 +24,7 @@ export class LoginComponent implements OnInit{
 
   submit() {
     this.http.post<any>(`${environment.apiUrl}/auth/login/empresa`, {
-      email: (document.getElementById('email') as HTMLInputElement).value,
+		username: (document.getElementById('username') as HTMLInputElement).value,
       senha: (document.getElementById('senha') as HTMLInputElement).value,
     }).subscribe({
       next: (response) => {
