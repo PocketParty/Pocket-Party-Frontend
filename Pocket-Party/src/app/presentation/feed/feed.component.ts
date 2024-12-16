@@ -27,7 +27,6 @@ export class FeedComponent implements OnInit {
   ngOnInit(): void {
 	this.http.get<any>(`${environment.apiUrl}/empresas/pesquisar/todas`, {}).subscribe({
 		next: (response) => {
-			console.log('Empresas pesquisada com sucesso:', response);
 			
 			// Mapeia os dados da resposta para o formato desejado
 			const mappedStores = response.map((empresa: any) => ({
@@ -36,8 +35,9 @@ export class FeedComponent implements OnInit {
 				descripition: empresa.descricao,
 				type: 'STORE',
 				image: 'https://auhekids.com.br/wp-content/uploads/2024/03/Desvendando-o-Codigo-da-Festa-Infantil-O-Segredo-do-Sucesso-1.jpg',
+				enterprises_tags: empresa.enterprises_tags,
+				products: []
 			}));
-			
 			// Envia os dados mapeados para o StoreService
 			this.storeService.setStores(mappedStores);
 			this.items = this.storeService.getStores();

@@ -36,21 +36,20 @@
   <h1>Empresas na sua região</h1>
   <div style="display: flex; flex-wrap: wrap;justify-content: space-evenly;">
     <ng-container *ngFor="let item of items">
-      <button type="hidden" (click)="goToLoja(item)" style="background: none;border: none;">
+      <button type="hidden" (click)="goToLoja(item)" style="background: none; border: none;">
         <div class="empresa">
-        <img src="{{item.image}}" alt="">
-        <h3>{{item.name}}</h3>
-        <div style="display: flex; flex-wrap: wrap; justify-content: space-evenly;">
-          <div style="margin-bottom: 1rem;" *ngIf="item.category[0]"><div class="labelCat3"><h5>Balões</h5></div></div>
-          <div style="margin-bottom: 1rem;" *ngIf="item.category[1]"><div class="labelCat4"><h5>Serviços</h5></div></div>
-          <div style="margin-bottom: 1rem;" *ngIf="item.category[2]"><div class="labelCat3"><h5>Bebidas</h5></div></div>
-          <div style="margin-bottom: 1rem;" *ngIf="item.category[3]"><div class="labelCat4"><h5>Buffet</h5></div></div>
-          <div style="margin-bottom: 1rem;" *ngIf="item.category[4]"><div class="labelCat3"><h5>Descartáveis</h5></div></div>
-          <div style="margin-bottom: 1rem;" *ngIf="item.category[5]"><div class="labelCat4"><h5>Decoração</h5></div></div>
-          <div style="margin-bottom: 1rem;" *ngIf="item.category[6]"><div class="labelCat3"><h5>Brinquedos</h5></div></div>
+          <img src="{{ item.image }}" alt="">
+          <h3>{{ item.name }}</h3>
+          <div style="display: flex; flex-wrap: wrap; justify-content: space-evenly;">
+            <!-- Itera sobre as tags da empresa -->
+            <div *ngFor="let tag of item.enterprises_tags" style="margin-bottom: 1rem;">
+              <div class="labelCat">
+				<div style="margin-bottom: 1rem;"><div class="labelCat3"><h5>{{ tag.tags.tag_name }}</h5></div></div>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-    </button>
+      </button>
     </ng-container>
   </div>
 
