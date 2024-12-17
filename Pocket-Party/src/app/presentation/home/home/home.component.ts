@@ -14,7 +14,7 @@ export class HomeComponent implements OnInit {
   }
 
   client(){
-    this.router.navigateByUrl('/cadastro-cliente');
+    this.router.navigateByUrl('/feed');
   }
 
   company(){

@@ -18,14 +18,9 @@
  <ng-container  *ngIf="signed()">
 
 <div class="buttons">
-      <button id="cadastro" class="botao" (click)="openModal()">Cadastre-se</button>
+      <button id="cadastro" class="botao" (click)="cadastro()">Cadastre-se</button>
       <button id="login" class="botao" (click)="navigateToLogin()">Login</button>
 </div>
 
-<div class="modal" *ngIf="showModal" (click)="closeModal($event)">
-  <div class="modal-content">
-    <app-cadastro-modal></app-cadastro-modal>
-  </div>
-</div>
 
 </ng-container>

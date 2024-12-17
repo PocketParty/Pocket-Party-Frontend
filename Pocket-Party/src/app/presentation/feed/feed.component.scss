@@ -8,6 +8,18 @@
   justify-content: space-around;
 }
 
+@media screen and (min-width: 300px) {
+  .categoriesBtn{
+    flex-wrap: wrap;
+  }
+  .btn{
+    margin-bottom: 2vh !important;
+  }
+
+  .btn2{
+    margin-bottom: 2vh !important;
+  }
+}
 .btn {
   cursor: pointer;
   border: 0;

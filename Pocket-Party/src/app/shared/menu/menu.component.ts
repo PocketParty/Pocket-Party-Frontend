@@ -13,17 +13,6 @@ export class MenuComponent {
 
   showModal = false;
 
-  openModal() {
-    this.showModal = true;
-  }
-
-  closeModal(event: Event) {
-    // Verifica se o clique foi dentro do modal-content
-    if ((event.target as Element).closest('.modal-content') === null) {
-      this.showModal = false;
-    }
-  }
-
   signed(){
     return this.router.url.includes('home');
   }
@@ -34,6 +23,10 @@ export class MenuComponent {
     } else{
       this.router.navigateByUrl('/feed');
     }
+  }
+
+  cadastro(){
+    this.router.navigateByUrl('/cadastro-empresa');
   }
 
   navigateToLogin() {
